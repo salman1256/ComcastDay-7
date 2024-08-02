@@ -137,3 +137,5 @@ D:\Comcast\Day-7\PlatformService\obj\Debug\net6.0\PlatformService.genruntimeconf
 D:\Comcast\Day-7\PlatformService\obj\Debug\net6.0\ref\PlatformService.dll
 D:\Comcast\Day-7\PlatformService\bin\Debug\net6.0\appsettings.Production.json
 D:\Comcast\Day-7\PlatformService\obj\Debug\net6.0\PlatformService.sourcelink.json
+D:\Comcast\Day-7\PlatformService\bin\Debug\net6.0\RabbitMQ.Client.dll
+D:\Comcast\Day-7\PlatformService\bin\Debug\net6.0\System.Threading.Channels.dll

@@ -135,3 +135,4 @@ D:\Comcast\Day-7\CommandService\obj\Debug\net6.0\refint\CommandService.dll
 D:\Comcast\Day-7\CommandService\obj\Debug\net6.0\CommandService.pdb
 D:\Comcast\Day-7\CommandService\obj\Debug\net6.0\CommandService.genruntimeconfig.cache
 D:\Comcast\Day-7\CommandService\obj\Debug\net6.0\ref\CommandService.dll
+D:\Comcast\Day-7\CommandService\obj\Debug\net6.0\CommandService.sourcelink.json
