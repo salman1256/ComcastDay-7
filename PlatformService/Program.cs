@@ -6,7 +6,15 @@ using PlatformService.SyncDataService.Http;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+if(builder.Environment.IsProduction())
+{
+System.Console.WriteLine("In production Using Sql Server Database");
+builder.Services.AddDbContext<AppDbContext>(opt=>opt.UseSqlServer(builder.Configuration.GetConnectionString("PlatformConn")));
+}
+else{
+    System.Console.WriteLine("In Development: Using in Memory Database");
 builder.Services.AddDbContext<AppDbContext>(options=>options.UseInMemoryDatabase("InMem"));
+}
 builder.Services.AddScoped<IPlatformRepo,PlatformRepo>();
 builder.Services.AddHttpClient<ICommandDataClient,CommandDataClient>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -30,7 +38,7 @@ System.Console.WriteLine("Command Service is Running on EndPoint "+builder.Confi
 app.UseAuthorization();
 
 app.MapControllers();
-PrepDb.PrepData(app);
+PrepDb.PrepData(app,builder.Environment.IsProduction());
 
 app.Run();
 
